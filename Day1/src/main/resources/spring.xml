@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="coach" class="org.example.CricketCoach">
+        <constructor-arg ref="skit" />
+    </bean>
+
+    <bean id="coach1" class="org.example.TennisCoach">
+        <property name="sportsKit" ref="skit"/>
+    </bean>
+
+    <bean id="skit" class="org.example.SportsKit" scope="prototype">
+
+    </bean>
+</beans>
